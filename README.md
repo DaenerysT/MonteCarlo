@@ -12,6 +12,8 @@ Area of Circle = (Number of points inside the circle (red points))/(Total number
 
 Estimate of Pi: 4X (Area of circle)/(Area of Sqaure)
 
+<img src="https://github.com/DaenerysT/MonteCarlo/blob/master/Fig.png"/>
+
 THE SUBMISSION
 
 Our submission introduces Monte Carlo methods by allowing children to dynamically estimate the value of Pi. Children can see a large circle inside of a square, and a basic equation (shown on the grid) with the results being calculated in real time. 
