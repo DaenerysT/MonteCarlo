@@ -14,7 +14,7 @@ Estimate of Pi: 4X (Area of circle)/(Area of Sqaure)
 
 THE SUBMISSION
 
-Our submission introduces Monte Carlo methods by allowing children to dynamically estimate the value of Pi. Children can see a large circle inside of a square, and a basic equation (shown) with the results being calculated in real time being calculated in real time. 
+Our submission introduces Monte Carlo methods by allowing children to dynamically estimate the value of Pi. Children can see a large circle inside of a square, and a basic equation (shown on the grid) with the results being calculated in real time. 
 
 When a child steps on a square, ten points randomly light up inside the square. It is possible to step on a square more than once and generate more points. The square accumulates data points for a set period of time before it resets. As more data points accumulates, theoretically the estimation of Pi improves. 
 
