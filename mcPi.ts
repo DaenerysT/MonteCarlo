@@ -15,10 +15,12 @@ export default class MCPi {
     public setup?: (this: p5, p5: p5) => void
     public draw?: (this: p5, floor: Floor, p5: p5) => void
     public radius: double;
+    public scaler: double;
 
     constructor(public sketch?: (p5: p5) => void)
     {
-        this.radius = Display.width/4
+        this.scaler = 2;
+        this.radius = 72./this.scaler;
         this.circleRadiusSq = this.radius * this.radius;
         this.totalPoints = 1;
         this.pointsInCircle = 1;
@@ -27,11 +29,13 @@ export default class MCPi {
 
     inCircle(x: number, y: number): int
     {
-        return ( (x*x + y*y) <= this.circleRadiusSq );
+        return ((x-this.radius) * (x-this.radius) + (y - this.radius) * (y - this.radius) <= this.circleRadiusSq);
     }
 
     update(x: number, y: number): double
     {
+        //console.log(x + " , " + y)
+        //console.log("centerX -> " + Display.width/2 + " , " + "centerY -> " + Display.height/2)
         this.totalPoints++;
         this.pointsInCircle += this.inCircle(x,y);
         this.updatePi();
@@ -40,7 +44,7 @@ export default class MCPi {
 
     updatePi(): void
     {
-        this.pi_ = 16 * this.pointsInCircle / this.totalPoints;
+        this.pi_ = this.scaler * this.scaler * this.pointsInCircle / this.totalPoints;
         console.log(this.pi_)
     }
 
